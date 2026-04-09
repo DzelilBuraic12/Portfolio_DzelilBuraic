@@ -1,0 +1,35 @@
+.hero-content {
+  display: flex;           // 👈 KLJUČNO
+  align-items: center;     // poravna po visini
+  gap: 40px;               // razmak između slike i teksta
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+
+.hero-text{
+    width:50%;
+    margin-left: auto;
+    color: white;
+
+    h1{
+        font-size: 44px;
+    }
+
+    p{
+        font-size: 24px;
+    }
+}
+
+.image{
+    
+    img{
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+    }
+    h1{
+        color: white;
+    }
+}

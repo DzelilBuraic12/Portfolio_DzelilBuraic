@@ -1,0 +1,93 @@
+.hero-container {
+  display: flex;
+  align-items: flex-start;  // ili center ako hoces vertikalno centrirano
+  gap: 80px;                // razmak između lijeve i desne strane
+  margin-top: 50px;
+}
+
+.hero-left {
+  color: white;
+  flex: 2.5;                  // zauzima jednaki prostor
+}
+
+.hero-text{
+    margin-bottom: 50px;
+}
+
+.hero-right {
+  color: white;
+  flex: 1;                  // zauzima jednaki prostor
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.form-group textarea {
+  resize: none;
+  min-height: 120px;  /* dovoljno velik */
+}
+
+.form-group hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 0;
+}
+
+/* Focus efekat na hr liniji */
+.form-group:focus-within hr {
+  border-top-color: rgba(255, 255, 255, 0.9);
+  transition: border-color 0.3s ease;
+}
+
+.submit{
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+}
+
+
+.contact-form button {
+    border-width: 2px;
+    border-style: solid;
+    font-size: 14px;
+    border-radius: 30px;
+    width: 120px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: transparent;
+        color: #ffff;
+        border-color: #ffff;
+        border-style: solid;
+        transform: translateY(-2px);
+    }
+}

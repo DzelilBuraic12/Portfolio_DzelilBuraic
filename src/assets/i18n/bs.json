@@ -1,0 +1,4 @@
+{
+  "nav": { "home": "Početna", "about": "O meni", "projects": "Projekti", "contact": "Kontakt" },
+  "hero": { "title": "Ja sam Software Engineer.", "subtitle": "Angular & .NET developer" }
+}

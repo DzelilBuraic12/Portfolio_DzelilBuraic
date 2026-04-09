@@ -1,0 +1,98 @@
+
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;   // centrira sadržaj (zbog 80% container-a)
+  padding: 10px 0;
+}
+
+.hero-content {
+  width: 100%;                // prati širinu navbara
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;                 // razmak između teksta i slike
+}
+
+
+.hero-text {
+    flex: 1;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.9s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        animation-delay: 0.5s;
+    }
+}
+
+
+.hero-text h1 {
+  font-size: 108px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  color: rgba(255,255,255,0.8);
+  font-size: 38px;
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  height: 50px;
+  font-size: 10px;
+  justify-content: center;
+}
+
+.primary{
+    background-color: transparent;
+    color: #ffff;
+    border-color: #ffff;
+    border-style: solid;
+    border-width: 2px;
+    width: 150px;
+    font-size: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: #ffff;
+        border-color: #ffff;
+        border-width: 2px;
+        border-style: solid;
+        color: black;
+        transform: translateY(-2px);
+    }
+}
+
+.secondary{
+    width: 120px;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 14px;
+    border-radius: 30px;
+    width: 150px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: transparent;
+        color: #ffff;
+        border-color: #ffff;
+        border-style: solid;
+        transform: translateY(-2px);
+    }
+}

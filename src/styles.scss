@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center; // centrira sadržaj
+}
+
+.page-container {
+  width: 80%;
+  max-width: 1400px;   // da ne bude preširoko na velikim ekranima
+  min-width: 320px;    // da ne puca na mobitelu
+  
+}
+
