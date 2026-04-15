@@ -35,6 +35,7 @@ $shadow-hover: 0 8px 28px oklch(0 0 0 / 0.5);
 .projects-section {
   max-width: 100%;
   margin: 0 auto;
+  padding-top: 100px;
 }
 
 .section-heading {
@@ -197,28 +198,37 @@ $shadow-hover: 0 8px 28px oklch(0 0 0 / 0.5);
 }
 
 @media (max-width: 768px) {
+  // Sakrij vertikalnu liniju
   .projects-timeline::before {
-    left: 24px;
+    display: none;
   }
 
-  .project-row {
-    grid-template-columns: 48px 1fr;
-    gap: $space-4;
-  }
-
+  // Sakrij dot i timeline-center stupac
   .timeline-center {
-    grid-column: 1;
-    justify-content: center;
-    padding-top: $space-6;
+    display: none;
   }
 
-  .project-side {
-    grid-column: 2;
+  // Prebaci na jednu kolonu, kartice jedna ispod druge
+  .project-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: $space-6;
   }
 
-  .project-row.left,
+  // Prikaži SAMO stranu koja ima karticu, sakrij praznu stranu
+  .project-row.left {
+    .project-side:last-child {
+      display: none;
+    }
+    .project-side:first-child {
+      display: block;
+    }
+  }
+
   .project-row.right {
-    .project-side:first-child,
+    .project-side:first-child {
+      display: none;
+    }
     .project-side:last-child {
       display: block;
     }

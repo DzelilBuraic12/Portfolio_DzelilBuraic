@@ -174,9 +174,9 @@
 }
 
 .contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
+  display: block;
+  flex-direction:row;
+
 }
 
 .contact-details p {
