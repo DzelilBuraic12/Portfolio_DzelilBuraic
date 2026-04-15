@@ -1,10 +1,14 @@
-
 .hero-text {
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
     color: white;
+    margin-bottom: 50px;
 }
 
 .container {
-    margin-bottom: 300px; 
+    margin-bottom: 80px;
 }
 
 .hero-visual {
@@ -39,7 +43,6 @@
     align-items: center;
     gap: 22px;
     cursor: pointer;
-    
     opacity: 0;
     transform: translateY(70px);
 }
@@ -48,7 +51,6 @@
     width: 64px;
     height: 64px;
     flex-shrink: 0;
-    
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -61,22 +63,143 @@
     transform: translateY(70px);
 }
 
-@media (max-width: 1024px) {
+// ─── RESPONSIVE ──────────────────────────────────────────
+
+// Manji desktop (do 1400px)
+@media (max-width: 1400px) {
     .skills-grid {
-        grid-template-columns: repeat(2, 200px);
-        gap: 25px 40px;
+        grid-template-columns: repeat(3, 190px);
+        gap: 25px 35px;
     }
 }
 
+// Laptop (do 1200px)
+@media (max-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 160px);
+        gap: 22px 25px;
+    }
+
+    .skill-icon svg {
+        width: 52px;
+        height: 52px;
+    }
+
+    .skill-icon span {
+        font-size: 18px;
+    }
+}
+
+// Tablet landscape (do 1024px)
+@media (max-width: 1024px) {
+    .hero-visual {
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .hero-visual h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 30px;
+        justify-content: center;
+        margin-top: 0;
+        padding-bottom: 60px;
+    }
+
+    .skill-icon {
+        justify-content: flex-start;
+        gap: 14px;
+    }
+
+    .skill-icon svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .skill-icon span {
+        font-size: 17px;
+    }
+}
+
+// Tablet portrait (do 768px)
 @media (max-width: 768px) {
+    .hero-visual h1 {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 24px;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    .skill-icon {
+        justify-content: flex-start;
+        gap: 14px;
+    }
+
+    .skill-icon svg {
+        width: 42px;
+        height: 42px;
+    }
+
+    .skill-icon span {
+        font-size: 16px;
+    }
+}
+
+// Mobitel (do 480px) — jedna kolona, sve lijevo
+@media (max-width: 480px) {
+    .hero-visual h1 {
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
-        justify-content: center;
-        gap: 20px;
+        gap: 16px 0;
+        justify-content: start;
+        margin-top: 0;
+        padding-bottom: 40px;
     }
-    
+
+    .skill-icon {
+        justify-content: flex-start;
+        gap: 14px;
+    }
+
     .skill-icon svg {
-        width: 56px;
-        height: 56px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .skill-icon span {
+        font-size: 16px;
+    }
+}
+
+// Vrlo mali mobitel (do 360px)
+@media (max-width: 360px) {
+    .hero-visual h1 {
+        font-size: 18px;
+    }
+
+    .skill-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .skill-icon span {
+        font-size: 14px;
     }
 }

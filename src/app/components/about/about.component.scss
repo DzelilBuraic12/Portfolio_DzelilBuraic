@@ -1,35 +1,109 @@
-.hero-content {
-  display: flex;           // 👈 KLJUČNO
-  align-items: center;     // poravna po visini
-  gap: 40px;               // razmak između slike i teksta
+.about {
   width: 100%;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  padding: 80px 0;
 }
 
-
-.hero-text{
-    width:50%;
-    margin-left: auto;
-    color: white;
-
-    h1{
-        font-size: 44px;
-    }
-
-    p{
-        font-size: 24px;
-    }
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
 }
 
-.image{
-    
-    img{
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-    }
-    h1{
-        color: white;
-    }
+// ─── TEKST LIJEVO ────────────────────────────────
+
+.about-text {
+  flex: 1;
+  color: white;
+}
+
+.about-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
+}
+
+.about-text h1 {
+  font-size: clamp(32px, 4vw, 52px);
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+}
+
+// ─── STATS DESNO ─────────────────────────────────
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   // 2x2 grid
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  min-width: 170px;
+  min-height: 200px;
+  text-align: center;
+  transition: border-color 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+    background: rgba(168, 85, 247, 0.05);
+  }
+}
+
+.stat-number {
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 1.4;
+}
+
+// ─── RESPONSIVE ──────────────────────────────────
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .about-text p {
+    max-width: 100%;
+  }
+
+  .about-stats {
+    width: 100%;
+  }
+
+  .stat-card {
+    min-width: unset;
+    padding: 24px 16px;
+  }
 }
