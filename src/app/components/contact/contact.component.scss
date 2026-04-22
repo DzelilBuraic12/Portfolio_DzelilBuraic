@@ -2,11 +2,15 @@
   background: #000;
   color: #f5f5f5;
   padding: 7rem 1.5rem 8rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-shell {
-  max-width: 980px;
+  width: 100%;
+  max-width: 860px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .contact-heading {
@@ -24,7 +28,7 @@
 }
 
 .contact-subtitle {
-  max-width: 760px;
+  max-width: 620px;
   margin: 0 auto;
   font-size: 1.05rem;
   line-height: 1.8;
@@ -32,23 +36,25 @@
 }
 
 .contact-layout {
-  max-width: 860px;
-  margin: 0 auto;
+  width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
-  justify-content: center;
+  grid-template-columns: minmax(0, 1fr) 320px;
   align-items: start;
   gap: 4.5rem;
+  box-sizing: border-box;
 }
 
 .contact-form-side {
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  width: 100%;
 }
 
 .form-group {
@@ -56,8 +62,15 @@
 }
 
 .contact-input,
-.contact-textarea {
+.contact-textarea,
+.contact-button {
   width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.contact-input,
+.contact-textarea {
   border: 1px solid #1f1f1f;
   background: #0d0d0d;
   color: #f5f5f5;
@@ -66,6 +79,8 @@
   font-size: 1rem;
   font-family: inherit;
   outline: none;
+  -webkit-appearance: none;
+  appearance: none;
   transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -81,6 +96,13 @@
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.035);
 }
 
+.contact-input:-webkit-autofill,
+.contact-textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #0d0d0d inset !important;
+  -webkit-text-fill-color: #f5f5f5 !important;
+  caret-color: #f5f5f5;
+}
+
 .contact-textarea {
   min-height: 215px;
   resize: vertical;
@@ -88,8 +110,6 @@
 }
 
 .contact-button {
-  width: 100%;
-  width: 470px;
   margin-top: 0.2rem;
   border: 1px solid #2b2b2b;
   background: #2f2f31;
@@ -99,6 +119,8 @@
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
   transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
 }
 
@@ -119,17 +141,14 @@
   font-size: 0.94rem;
 }
 
-.success-msg {
-  color: #8fe3a4;
-}
-
-.error-msg {
-  color: #ff9a9a;
-}
+.success-msg { color: #8fe3a4; }
+.error-msg   { color: #ff9a9a; }
 
 .contact-info-side {
   width: 100%;
+  min-width: 0;
   padding-top: 1.1rem;
+  box-sizing: border-box;
 }
 
 .contact-info-title {
@@ -162,7 +181,7 @@
 }
 
 .social-link:hover {
-  color: #ffffff;
+  color: #fff;
   transform: translateY(-2px);
 }
 
@@ -174,15 +193,14 @@
 }
 
 .contact-details {
-  display: block;
-  flex-direction:row;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-details p {
   color: #9d9d9d;
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-top: 10px;
 }
 
 .contact-details strong {
@@ -190,6 +208,7 @@
   font-weight: 500;
 }
 
+// ─── TABLET ──────────────────────────────────────────────────
 @media (max-width: 900px) {
   .contact-heading {
     margin-bottom: 3.2rem;
@@ -197,7 +216,6 @@
 
   .contact-layout {
     grid-template-columns: 1fr;
-    max-width: 620px;
     gap: 2.8rem;
   }
 
@@ -206,13 +224,31 @@
   }
 }
 
-@media (max-width: 600px) {
+// ─── MOBITEL ─────────────────────────────────────────────────
+@media (max-width: 768px) {
   .contact-section {
-    padding: 5rem 1rem 6rem;
+    width: 100%;
+    position: static;
+    left: auto;
+    margin-left: 0;
+    padding: 4rem var(--container-padding) 5rem; // ← dodaj padding inline
+    box-sizing: border-box;
+  }
+
+  .contact-shell {
+    width: 100%;
+    max-width: 100%;
+    padding: 0; // ← shell ne treba padding, section ga već ima
+    box-sizing: border-box;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
   }
 
   .contact-title {
-    font-size: 2.7rem;
+    font-size: 2.6rem;
   }
 
   .contact-subtitle {
@@ -223,6 +259,11 @@
   .contact-textarea,
   .contact-button {
     border-radius: 10px;
+    background: #0d0d0d;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .contact-textarea {

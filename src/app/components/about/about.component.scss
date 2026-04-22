@@ -9,6 +9,11 @@
   align-items: center;
   gap: 80px;
   width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;                           // ← dodaj
+  padding-inline: var(--container-padding); // ← dodaj
+  box-sizing: border-box;
+
 }
 
 // ─── TEKST LIJEVO ────────────────────────────────
@@ -47,8 +52,9 @@
 .about-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;   // 2x2 grid
-  gap: 40px;
-  flex-shrink: 0;
+  gap: 20px;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .stat-card {
@@ -56,18 +62,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 32px 24px;
+  padding: 62px 54px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.03);
-  min-width: 170px;
-  min-height: 200px;
+  min-width: unset;
+  min-height: 160px;
   text-align: center;
   transition: border-color 0.3s ease, background 0.3s ease;
 
   &:hover {
-    border-color: rgba(168, 85, 247, 0.4);
-    background: rgba(168, 85, 247, 0.05);
+    border-color: rgba(247, 198, 85, 0.4);
+    background: rgba(247, 244, 85, 0.05);
   }
 }
 

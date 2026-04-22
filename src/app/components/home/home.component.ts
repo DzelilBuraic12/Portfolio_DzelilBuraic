@@ -12,4 +12,7 @@ import { ContactComponent } from "../contact/contact.component";
 })
 export class HomeComponent {
 
+  scrollTo(section: string) {
+  document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+}
 }

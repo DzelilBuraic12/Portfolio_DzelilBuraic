@@ -1,205 +1,211 @@
-.hero-text {
-    font-size: 20px;
-    font-weight: 300;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    color: white;
-    margin-bottom: 50px;
+.hero-text h2 {
+  font-size: var(--text-2xl);       // ← bilo: $text-2xl
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: #e2e2e0;
+  margin-bottom: 3rem;
 }
 
 .container {
-    margin-bottom: 80px;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-inline: var(--container-padding);
+  box-sizing: border-box;
+  margin-bottom: 80px;
 }
 
 .hero-visual {
-    padding-top: 40px;
-    color: white;
+  padding-top: 40px;
+  color: white;
+  margin-left: 1px;
 }
 
 .hero-visual h1 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
+  font-size: var(--text-lg);        // ← bilo: $text-lg
+  font-weight: 500;
+  margin-bottom: 30px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: white;
 }
 
 .skills-grid {
-    padding-bottom: 100px;
-    margin-top: -70px;
-    display: grid;
-    grid-template-columns: repeat(3, 230px);
-    gap: 30px 50px;
-    justify-content: end;
-    align-items: center;
+  padding-bottom: 100px;
+  margin-top: -70px;
+  display: grid;
+  grid-template-columns: repeat(3, 230px);
+  gap: 30px 50px;
+  justify-content: end;
+  align-items: center;
 
-    span {
-        font-size: 22px;
-    }
+  span {
+    font-size: var(--text-base);    // ← bilo: $text-base
+  }
 }
 
 .skill-icon {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 22px;
-    cursor: pointer;
-    opacity: 0;
-    transform: translateY(70px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 22px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(70px);
 }
 
 .skill-icon svg {
-    width: 64px;
-    height: 64px;
-    flex-shrink: 0;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skill-icon:hover svg {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .fade-up {
-    opacity: 0;
-    transform: translateY(70px);
+  opacity: 0;
+  transform: translateY(70px);
 }
 
 // ─── RESPONSIVE ──────────────────────────────────────────
 
-// Manji desktop (do 1400px)
 @media (max-width: 1400px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 190px);
-        gap: 25px 35px;
-    }
+  .skills-grid {
+    grid-template-columns: repeat(3, 190px);
+    gap: 25px 35px;
+  }
 }
 
-// Laptop (do 1200px)
 @media (max-width: 1200px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 160px);
-        gap: 22px 25px;
-    }
+  .skills-grid {
+    grid-template-columns: repeat(3, 160px);
+    gap: 22px 25px;
+  }
 
-    .skill-icon svg {
-        width: 52px;
-        height: 52px;
-    }
+  .skill-icon svg {
+    width: 52px;
+    height: 52px;
+  }
 
-    .skill-icon span {
-        font-size: 18px;
-    }
+  .skill-icon span {
+    font-size: var(--text-sm);      // ← bilo: $text-sm
+  }
 }
 
-// Tablet landscape (do 1024px)
 @media (max-width: 1024px) {
-    .hero-visual {
-        padding-top: 20px;
-        width: 100%;
-    }
+  .hero-visual {
+    padding-top: 20px;
+    width: 100%;
+  }
 
-    .hero-visual h1 {
-        font-size: 26px;
-        text-align: center;
-    }
+  .hero-visual h1 {
+    font-size: var(--text-base);    // ← bilo: $text-base
+    text-align: center;
+  }
 
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px 30px;
-        justify-content: center;
-        margin-top: 0;
-        padding-bottom: 60px;
-    }
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px;
+    justify-content: center;
+    margin-top: 0;
+    padding-bottom: 60px;
+  }
 
-    .skill-icon {
-        justify-content: flex-start;
-        gap: 14px;
-    }
+  .skill-icon {
+    justify-content: flex-start;
+    gap: 14px;
+  }
 
-    .skill-icon svg {
-        width: 48px;
-        height: 48px;
-    }
+  .skill-icon svg {
+    width: 48px;
+    height: 48px;
+  }
 
-    .skill-icon span {
-        font-size: 17px;
-    }
+  .skill-icon span {
+    font-size: var(--text-sm);      // ← bilo: $text-sm
+  }
 }
 
-// Tablet portrait (do 768px)
 @media (max-width: 768px) {
-    .hero-visual h1 {
-        font-size: 22px;
-        letter-spacing: 1.5px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
+  .hero-visual {
+    margin-left: 2px;
+  }
 
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px 24px;
-        justify-content: center;
-        padding-bottom: 50px;
-    }
+  .hero-visual h1 {
+    font-size: var(--text-sm);      // ← bilo: $text-sm
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-    .skill-icon {
-        justify-content: flex-start;
-        gap: 14px;
-    }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
 
-    .skill-icon svg {
-        width: 42px;
-        height: 42px;
-    }
+  .skill-icon {
+    justify-content: flex-start;
+    gap: 14px;
+  }
 
-    .skill-icon span {
-        font-size: 16px;
-    }
+  .skill-icon svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .skill-icon span {
+    font-size: var(--text-sm);      // ← bilo: $text-sm
+  }
 }
 
-// Mobitel (do 480px) — jedna kolona, sve lijevo
 @media (max-width: 480px) {
-    .hero-visual h1 {
-        font-size: 20px;
-        letter-spacing: 1px;
-        margin-bottom: 16px;
-        text-align: left;
-    }
+  .hero-visual h1 {
+    font-size: var(--text-sm);      // ← bilo: $text-sm
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 16px 0;
-        justify-content: start;
-        margin-top: 0;
-        padding-bottom: 40px;
-    }
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 16px 0;
+    justify-content: start;
+    margin-top: 0;
+    padding-bottom: 40px;
+  }
 
-    .skill-icon {
-        justify-content: flex-start;
-        gap: 14px;
-    }
+  .skill-icon {
+    justify-content: flex-start;
+    gap: 14px;
+  }
 
-    .skill-icon svg {
-        width: 36px;
-        height: 36px;
-    }
+  .skill-icon svg {
+    width: 36px;
+    height: 36px;
+  }
 
-    .skill-icon span {
-        font-size: 16px;
-    }
+  .skill-icon span {
+    font-size: var(--text-sm);      // ← bilo: $text-sm
+  }
 }
 
-// Vrlo mali mobitel (do 360px)
 @media (max-width: 360px) {
-    .hero-visual h1 {
-        font-size: 18px;
-    }
+  .hero-visual h1 {
+    font-size: var(--text-sm);      // ← bilo: $text-sm
+  }
 
-    .skill-icon svg {
-        width: 32px;
-        height: 32px;
-    }
+  .skill-icon svg {
+    width: 32px;
+    height: 32px;
+  }
 
-    .skill-icon span {
-        font-size: 14px;
-    }
+  .skill-icon span {
+    font-size: var(--text-xs);      // ← bilo: $text-xs
+  }
 }
