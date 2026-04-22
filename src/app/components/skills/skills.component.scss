@@ -139,6 +139,7 @@
 @media (max-width: 768px) {
   .hero-visual {
     margin-left: 2px;
+    padding-bottom: 30px;
   }
 
   .hero-visual h1 {
@@ -152,7 +153,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px 24px;
     justify-content: center;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
   }
 
   .skill-icon {
