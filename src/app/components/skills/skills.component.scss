@@ -120,6 +120,12 @@
     gap: 14px;
   }
 
+  .skill-icon, .fade-up {
+  will-change: transform, opacity;
+  transform: translateY(70px) translateZ(0);
+  backface-visibility: hidden; // ← ovo je ključno za 120Hz
+}
+
   .skill-icon svg {
     width: 48px;
     height: 48px;
