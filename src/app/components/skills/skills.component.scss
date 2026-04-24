@@ -139,7 +139,6 @@
 @media (max-width: 768px) {
   .hero-visual {
     margin-left: 2px;
-    padding-bottom: 30px;
   }
 
   .hero-visual h1 {
@@ -168,6 +167,12 @@
 
   .skill-icon span {
     font-size: var(--text-sm);      // ← bilo: $text-sm
+  }
+
+  .skill-icon, .fade-up {
+    will-change: transform, opacity;
+    transform: translateY(70px) translateZ(0);
+    backface-visibility: hidden; // ← ovo je ključno za 120Hz
   }
 }
 
