@@ -28,4 +28,10 @@ export class NavbarComponent {
     // i localStorage.setItem('lang', l);
   }
 
+  scrollToSection(sectionId: string) {
+    const el = document.getElementById(sectionId);
+    if(el) {
+      el.scrollIntoView({ behavior: 'smooth'});
+    }
+  }
 }

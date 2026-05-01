@@ -97,14 +97,17 @@
 }
 
 @media (max-width: 1024px) {
+  .hero{
+    padding-bottom: 50px;
+  }
   .hero-visual {
     padding-top: 20px;
     width: 100%;
   }
 
   .hero-visual h1 {
-    font-size: var(--text-base);    // ← bilo: $text-base
-    text-align: center;
+    font-size: var(--text-lg);    // ← bilo: $text-base
+    text-align: left;
   }
 
   .skills-grid {
@@ -119,12 +122,6 @@
     justify-content: flex-start;
     gap: 14px;
   }
-
-  .skill-icon, .fade-up {
-  will-change: transform, opacity;
-  transform: translateY(70px) translateZ(0);
-  backface-visibility: hidden; // ← ovo je ključno za 120Hz
-}
 
   .skill-icon svg {
     width: 48px;
@@ -142,17 +139,18 @@
   }
 
   .hero-visual h1 {
-    font-size: var(--text-sm);      // ← bilo: $text-sm
+    font-size: var(--text-base);      // ← bilo: $text-sm
     letter-spacing: 1.5px;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px 24px;
     justify-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
+    padding-top: 30px;
   }
 
   .skill-icon {
@@ -167,12 +165,6 @@
 
   .skill-icon span {
     font-size: var(--text-sm);      // ← bilo: $text-sm
-  }
-
-  .skill-icon, .fade-up {
-    will-change: transform, opacity;
-    transform: translateY(70px) translateZ(0);
-    backface-visibility: hidden; // ← ovo je ključno za 120Hz
   }
 }
 

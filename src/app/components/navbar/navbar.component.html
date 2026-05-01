@@ -6,17 +6,18 @@
     </button>
 
     <ul class="nav-links" [class.open]="isMenuOpen">
-      <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
-      <li><a routerLink="/about" routerLinkActive="active-link" (click)="closeMenu()">About</a></li>
-      <li><a routerLink="/projects" routerLinkActive="active-link" (click)="closeMenu()">Projects</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active-link" (click)="closeMenu()">Contact</a></li>
-      <li><a routerLink="/resume" routerLinkActive="active-link" (click)="closeMenu()">Resume</a></li>
+      <li><a (click)="scrollToSection('home'); closeMenu()" style="cursor:pointer">Home</a></li>
+      <li><a (click)="scrollToSection('about'); closeMenu()" style="cursor:pointer">About</a></li>
+      <li><a (click)="scrollToSection('projects'); closeMenu()" style="cursor:pointer">Projects</a></li>
+      <li><a (click)="scrollToSection('contact'); closeMenu()" style="cursor:pointer">Contact</a></li>
 
+      <!--
       <li class="lang-mobile">
         <button type="button" (click)="setLang('en')" [class.active]="lang==='en'">EN</button>
         <p>|</p>
         <button type="button" (click)="setLang('bs')" [class.active]="lang==='bs'">BS</button>
       </li>
+      !-->
     </ul>
 
   </div>
