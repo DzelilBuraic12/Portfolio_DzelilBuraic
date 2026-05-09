@@ -22,7 +22,7 @@ $shadow-hover: 0 8px 28px oklch(0 0 0 / 0.5);
   margin: 0 auto;
   padding-inline: var(--container-padding);
   box-sizing: border-box;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .section-heading {
@@ -161,6 +161,7 @@ $shadow-hover: 0 8px 28px oklch(0 0 0 / 0.5);
   line-height: 1.7;
   margin-bottom: var(--space-6);    // ← bilo: $space-6
   max-width: 58ch;
+  margin-left: -26px;
 }
 
 .card-tags {

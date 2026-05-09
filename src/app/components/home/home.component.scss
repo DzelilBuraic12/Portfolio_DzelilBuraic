@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 60px 0;
+  padding: 80px 0;
   min-height: 70vh;
   align-items: center;
 }
@@ -84,22 +84,21 @@
   display: flex;
   gap: 12px;
   margin-top: 32px;
-  flex-wrap: wrap;                      // na malim ekranima idu u novi red
+  flex-wrap: wrap;                      
 }
 
-// ─── SLIKA DESNO ────────────────────────────────────────
 
 .hero-image {
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeIn 0.9s ease 0.5s forwards;   // kasni malo za tekstom
+  animation: fadeIn 0.9s ease 0.5s forwards;   
 }
 
 .image-wrapper {
-  width: clamp(220px, 28vw, 420px);     // fluid veličina
+  width: clamp(220px, 28vw, 420px);     
   height: clamp(220px, 28vw, 420px);
-  border-radius: 50%;                   // krug — možeš promijeniti u 24px za kvadrat
+  border-radius: 50%;                   
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.1);
 
@@ -107,7 +106,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;        // fokus na lice
+    object-position: top center;        
   }
 }
 
