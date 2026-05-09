@@ -1,0 +1,113 @@
+.footer {
+  background-color: #000;
+  color: #a0a0a0;
+  margin-top: auto;
+  padding-bottom: 3rem;
+}
+
+.footer-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-inline: var(--container-padding);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-name {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.footer-subtitle {
+  font-size: var(--text-sm);
+  color: #a0a0a0;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+
+  a {
+    font-size: var(--text-sm);
+    color: #a0a0a0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+.footer-copy {
+  font-size: var(--text-xs);
+  color: #666;
+  text-align: center;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.back-to-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  color: #a0a0a0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    color: #ffffff;
+
+    svg {
+      transform: translateY(-3px); // ← strelica se pomjera gore na hover
+    }
+  }
+}
+
+// ─── RESPONSIVE ──────────────────────────────────────────
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-left {
+    align-items: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+}
