@@ -154,6 +154,9 @@ $shadow-hover:      0 8px 28px oklch(0 0 0 / 0.45);
 
 // --- Responsive ---
 @media (max-width: 768px) {
+  .section-heading{
+    margin-left: 5px;
+  }
   .timeline-layout {
     grid-template-columns: 1fr;
     max-width: 100%;
