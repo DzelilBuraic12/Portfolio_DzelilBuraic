@@ -188,6 +188,10 @@ $shadow-hover: 0 8px 28px oklch(0 0 0 / 0.5);
 }
 
 @media (max-width: 768px) {
+  .projects-section{
+    margin-top: 0px;
+    padding-bottom: 80px;
+  }
   .section-heading{
     margin-left: 5px;
   }
